@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        let n = prompt("Enter a String: " );
+        let a = [];
+        a = n.split(" ");
+        let l = 0;
+        let b = -1;
+        
+        a.forEach((element,i) => {
+            if(element.length > l ){
+                l = element.length;
+                b = i;
+            }
+        });
+
+        console.log(a[b]);
+
+        
+    </script>
+</body>
+</html>
