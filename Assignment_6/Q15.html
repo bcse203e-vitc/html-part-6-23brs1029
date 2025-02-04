@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        function findMissingNumber(input) {
+            let ns = input.split(',').map(Number);
+            
+            let n = ns.length + 1;
+            let expectedSum = (n * (n + 1)) / 2;
+            let actualSum = ns.reduce((acc, num) => acc + num, 0);
+            
+            let missingNumber = expectedSum - actualSum;
+            console.log("Missing Number:"+ missingNumber);
+        }
+
+        let input = prompt("Enter a sequence of numbers separated by commas: ");
+        findMissingNumber(input);
+
+    </script>
+</body>
+</html>
