@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+        function isPangram(a) {
+            let alphabet = "abcdefghijklmnopqrstuvwxyz";
+            let lowerCaseSentence = a.toLowerCase();
+            
+            for (let char of alphabet) {
+                if (!lowerCaseSentence.includes(char)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkPangram(a) {
+            
+            if (a) {
+                if (isPangram(a)) {
+                    console.log("✅ It is a pangram.");
+                } else {
+                    console.log("❌ It is not a pangram.");
+                }
+            }
+        }
+
+        let sentence = prompt("Enter a sentence to check if it is a pangram:");
+        checkPangram(sentence);
+    </script>
+</body>
+</html>
