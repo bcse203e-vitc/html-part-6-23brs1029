@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+        
+        let n = prompt("Enter a Number ");
+        let arr = []
+        arr = n.split("");
+        let sum = 0;
+        arr.forEach(i => {
+            sum += i ** arr.length;
+        })
+
+        if(sum == n){
+            console.log(n + " is an Armstong Number")
+        }else {
+            console.log(n + " is not an Armstong Number")
+        }
+        
+    </script>
+</body>
+</html>
+
