@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        let n = prompt("Enter a Number: " );
+        let a = Array.from(n.toString(),Number).map(Number)
+   
+        a.sort();
+        console.log("Second Smallest: " + a[1]);
+        console.log("Second Largest: "+ a[ a.length - 2 ]);
+        
+    </script>
+</body>
+</html>
