@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        function redup(arr){
+            return arr.filter((item, index) => arr.indexOf(item) === index);
+        }
+        
+        let n = prompt("Enter Number to convert into array: " );
+        let a = Array.from(n.toString(),Number).map(Number)
+
+        console.log(redup(a));
+
+    </script>
+</body>
+</html>
