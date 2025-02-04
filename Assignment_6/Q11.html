@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+        
+        let n = prompt("Enter a String ");
+        let a = [];
+        a = n.split("");
+        let c1 = 0;
+        let c2 = 0;
+
+        a.forEach ( i => {
+            if ( i == "a" || i == "e" || i == "i" || i == "o" || i == "u"){
+                c1 += 1;
+            }else{
+                c2 += 1;
+            }
+        })
+        
+        console.log("Number of vowels: " + c1);
+        console.log("Number of consonants: " + c2);
+        
+    </script>
+</body>
+</html>
