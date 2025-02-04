@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        function first(str) {
+            let charCount = {};
+            
+            for (let char of str) {
+                charCount[char] = (charCount[char] || 0) + 1;
+            }
+            
+            for (let char of str) {
+                if (charCount[char] === 1) {
+                    return char;
+                }
+            }
+            return null;
+        }
+
+        function find(input) {
+            let result = first(input);
+            
+            if (result) {
+                console.log("First Non-Repeating Character:", result);
+            } else {
+                console.log("No unique character found.");
+            }
+        }
+
+        let a = prompt("Enter a string:");
+        find(a);
+        
+    </script>
+</body>
+</html>
