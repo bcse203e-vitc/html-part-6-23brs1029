@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Basic Javascript</title>
+</head>
+<body> 
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Result in Console</h1>
+    
+    <script>
+
+        function bubbleSort(arr, ascending = true) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if ((ascending && arr[j] > arr[j + 1]) || (!ascending && arr[j] < arr[j + 1])) {
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    }
+                }
+            }
+            return arr;
+        }
+
+        function sortArray(input,ascending) {
+            let numbers = input.split(',').map(Number);
+            let sortedArray = bubbleSort(numbers, ascending);
+            console.log("Sorted Array: ", sortedArray);
+        }
+
+        let a = prompt("Enter numbers separated by commas: ");
+        sortArray(a);
+
+    </script>
+</body>
+</html>
